@@ -19,11 +19,11 @@ export async function POST(request) {
         .send(message)
         .then(() => {
             // Handle success
-            // console.log('Email sent');
+            console.log('The following email was sent successfully: ', message);
         })
         .catch((error) => {
             // log error somehow better than this
-            // console.error(error);
+            console.error('The following email was not sent successfully: ', message, error);
         });
     return Response.ok;
 }

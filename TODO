@@ -9,3 +9,4 @@
 - Add a little game to the home page
 - Update about page and re-word
 - Make sure that emails are only sent in production and console logged during development
+- Need to let user know that their contact form sent
