@@ -8,7 +8,7 @@ export default function About() {
         <br />
         <section>
             <p>
-                I'm a passionate software developer with a strong desire to [insert desire here].
+                I&apos;m a passionate software developer with a strong desire to [insert desire here].
                 With 4 years of experience in the industry, I have developed a deep understanding of frontend web, backend web and database  development.
             </p>
         </section>
@@ -24,7 +24,7 @@ export default function About() {
             <p>
                 I am skilled in javascript, C# and SQL Server.
                 From front-end development using Angular, React and Next.js to back-end development with ASP.NET MVC, I am comfortable working accross the full stack.
-                Additionally, I am always eager to learn new technologies to help my client or employer create the solution that's best for them.
+                Additionally, I am always eager to learn new technologies to help my client or employer create the solution that&apos;s best for them.
             </p>
         </section>
         <section>
