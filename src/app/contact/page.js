@@ -1,26 +1,13 @@
 "use client";
 
+import { contactByEmail } from "@/lib/contact";
 import { useForm } from "react-hook-form";
 
 export default function Contact() {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     async function onSubmit(data) {
-        try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-
-            if(!response.ok) {
-                throw new Error(`Invalid response: ${response.status}`);
-            }
-        } catch (err) {
-            console.error(err);
-        }
+        await contactByEmail(data);
     }
 
     return <form className="container" onSubmit={handleSubmit(onSubmit)}>
