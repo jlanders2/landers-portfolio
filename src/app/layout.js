@@ -1,4 +1,5 @@
 import './globals.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Roboto_Mono } from 'next/font/google';
 import { Navbar } from '../components/navbar';
 import { Footer } from '../components/footer';
