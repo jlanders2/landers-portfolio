@@ -8,3 +8,4 @@
     - Add a download link for the resume
 - Add a little game to the home page
 - Update about page and re-word
+- Make sure that emails are only sent in production and console logged during development

@@ -1,45 +1,52 @@
 "use client";
 
-import { emailMe } from "@/lib/email";
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 export default function Contact() {
-    const [from, setFrom] = useState('');
-    const [subject, setSubject] = useState('');
-    const [message, setMessage] = useState('');
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
-    const onChangeFrom = ((e) => {
-        setFrom(e.target.value);
-    });
+    async function onSubmit(data) {
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
 
-    const onChangeSubject = ((e) => {
-        setSubject(e.target.value);
-    });
-    
-    const onChangeMessage = ((e) => {
-        setMessage(e.target.value);
-    });
+            if(!response.ok) {
+                throw new Error(`Invalid response: ${response.status}`);
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    }
 
-    const onSubmitContactForm = ((e) => {
-        e.preventDefault();
-        emailMe(from, subject, message)
-    });
-
-    return <div className="container">
-        <form onSubmit={onSubmitContactForm}>
-            <div className="mb-3">
-                <label htmlFor="fromAddr" className="form-label">Email address</label>
-                <input type="email" name="fromAddr" className="form-control" value={from.value} onChange={onChangeFrom} />
-            </div>
-            <div className="mb-3">
-                <label htmlFor="subject" className="form-label">Subject</label>
-                <input type="text" name="subject" className="form-control" value={subject.value} onChange={onChangeSubject} />
-            </div>
-            <div className="mb-3">
-                <label htmlFor="message" className="form-label">Message</label>
-                <textarea name="message" className="form-control" rows={10} value={message.value} onChange={onChangeMessage} />
-            </div>
-            <button name="submitButton" className="btn btn-primary bg-light text-dark border-dark w-100" type="submit">Send</button>
-        </form>
-    </div>;
+    return <form className="container" onSubmit={handleSubmit(onSubmit)}>
+        <div className="mb-3">
+            <label htmlFor="from" className="form-label">Email address</label>
+            <input  id="from"
+                    name="from" 
+                    className="form-control"
+                    {...register("from", {required: true, autoComplete: "email", type: "email"})}/>
+        </div>
+        <div className="mb-3">
+            <label htmlFor="subject" className="form-label">Subject</label>
+            <input  type="text"
+                    id="subject"
+                    name="subject" 
+                    className="form-control"
+                    {...register("subject", {required: true, type: "text"})}/>
+        </div>
+        <div className="mb-3">
+            <label htmlFor="message" className="form-label">Message</label>
+            <textarea   id="message" 
+                        name="message" 
+                        className="form-control" 
+                        rows={10}
+                        {...register("message", {required: true})}/>
+        </div>
+        <button name="submitButton" className="btn btn-primary bg-light text-dark border-dark w-100" type="submit">Send</button>
+    </form>;
 }
