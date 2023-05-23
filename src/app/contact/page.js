@@ -29,7 +29,7 @@ export default function Contact() {
             <input  id="from"
                     name="from" 
                     className="form-control"
-                    {...register("from", {required: true, autoComplete: "email", type: "email"})}/>
+                    {...register("from", {autoComplete: "email", type: "email"})}/>
         </div>
         <div className="mb-3">
             <label htmlFor="subject" className="form-label">Subject</label>
