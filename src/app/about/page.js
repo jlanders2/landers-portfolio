@@ -12,7 +12,7 @@ export default function About() {
                 With 4 years of experience in the industry, I have developed a deep understanding of frontend web, backend web and database  development.
             </p>
         </section>
-            <br />
+        <br />
         <section>
             <p>
                 Throughout my career, I have had the opportunity to work on diverse projects, including various APIs, resource management and inventory tracking solutions.
@@ -27,12 +27,14 @@ export default function About() {
                 Additionally, I am always eager to learn new technologies to help my client or employer create the solution that&apos;s best for them.
             </p>
         </section>
+        <br />
         <section>
             <p>
                 What sets me apart is my commitment to continuous learning and staying up-to-date with the latest industry technologies.
                 I am always exploring new technologies and experimenting with ways to ehance my skillset. This allows me to be extremely adaptable and ensures that I am equipped to handle any challenges that come my way.
             </p>
         </section>
+        <br />
         <section>
             <p>
                 I am passionate about collaborating with clients and developers to come up with the best solutions possible. I value communication, attention to detail, and delivering high-quality solutions.
