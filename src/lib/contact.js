@@ -15,7 +15,7 @@ export async function contactByEmail(data) {
         html: `<html>${data.message}</html>`
     };
 
-    sgMail
+    await sgMail
         .send(message)
         .then(() => {
             // Handle success
@@ -25,5 +25,4 @@ export async function contactByEmail(data) {
             // log error somehow better than this
             console.error('The following email was not sent successfully: ', message, error);
         });
-    return Response.ok;
 }
