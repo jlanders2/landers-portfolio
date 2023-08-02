@@ -8,10 +8,14 @@ input, textarea, #contactSubmit {
     color: #000 !important;
 }
 
-.navButton {
+.navButton, .navDivider {
     background-color: rgba(0,0,0,0) !important;
 }
 
 .navButton:hover a{
     color: rgb(157, 196, 148) !important;
+}
+
+a {
+    text-decoration: none !important;
 }

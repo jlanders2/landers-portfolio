@@ -6,7 +6,7 @@ export default function Resume() {
         <div className="d-flex justify-content-between">
             <h1>Software Consultant</h1>
         </div>
-        <hr/>
+        <br />
         <h4>Contact</h4>
         <p><b>Email</b>: jcolelanders@gmail.com</p>
         <p><b>Phone</b>: (256) 225-5403</p>
@@ -39,11 +39,11 @@ export default function Resume() {
             <br/>
             <li>
                 <div className="row">
-                    <div className="col-8">
+                    <div className="col-md-8 col-xs-6">
                         <p className="h6">Software Developer</p>
                     </div>
-                    <div className="col-4">
-                    <small className="fw-bold">WMP Crates, Oxford, AL / Apr 2019 - Sep 2022</small>
+                    <div className="col-md-4 col-xs-6">
+                        <small className="fw-bold">WMP Crates, Oxford, AL / Apr 2019 - Sep 2022</small>
                     </div>
                 </div>
                 <div className="row">

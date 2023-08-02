@@ -19,6 +19,9 @@ export default function RootLayout({ children }) {
         <header>
           <Navbar />
         </header>
+        <div className="d-flex justify-content-center">
+          <hr className="w-75"/>
+        </div>
         <content>
           <div className="mt-5 pb-5">{children}
           </div>
