@@ -22,7 +22,7 @@ export default function Resume() {
                         <p className="h6">Software Consultant</p>
                     </div>
                     <div className="col-4">
-                    <small className="fw-bold">CGI, Jacksonville, AL / Oct 2022 - Present</small>
+                    <small className="fw-bold">CGI, Birmingham, AL / Oct 2022 - Present</small>
                     </div>
                 </div>
                 <div className="row">
