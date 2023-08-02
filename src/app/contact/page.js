@@ -42,7 +42,7 @@ export default function Contact() {
                                 rows={10}
                                 {...register("message", {required: true})}/>
                 </div>
-                <button name="submitButton" className="btn btn-primary bg-light text-dark border-dark w-100" type="submit">Send</button>
+                <button id="contactSubmit" name="submitButton" className="btn btn-primary bg-light text-dark border-dark w-100" type="submit">Send</button>
             </div>
         </div>
     </form>

@@ -15,7 +15,7 @@ const font = Roboto_Mono({ subsets: ['latin'] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${font.className} d-flex flex-column min-vh-100`}>
+      <body className={`${font.className} d-flex flex-column min-vh-100 diagonal-background`}>
         <header>
           <Navbar />
         </header>
