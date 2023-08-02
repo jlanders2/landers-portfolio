@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function About() {
     return <div className="container">
         <section>
@@ -34,6 +36,10 @@ export default function About() {
                 I am passionate about collaborating with clients and developers to come up with the best solutions possible. I value communication, attention to detail, and delivering high-quality solutions.
                 I take pride in each project I contribute towards and put forth my best effort in all projects that I am apart of. 
             </p>
+        </section>
+        <br/>
+        <section className="d-flex justify-content-center">
+            <Image src="/about.jpg" width={640} height={480} alt="Picture of John Landers"/>
         </section>
     </div>;
 }
