@@ -39,7 +39,7 @@ export default function About() {
         </section>
         <br/>
         <section className="d-flex justify-content-center">
-            <Image src="/about.jpg" width={640} height={480} alt="Picture of John Landers"/>
+            <Image className="img-fluid" src="/about.jpg" width={640} height={480} alt="Picture of John Landers"/>
         </section>
     </div>;
 }

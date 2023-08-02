@@ -72,11 +72,7 @@ export default function Resume() {
                             <li>C#</li>
                             <li>ASP.NET MVC</li>
                             <li>SQL Server</li>
-                            <li>Javascript/Typescript</li>
-                        </ul>
-                    </div>
-                    <div className="col-6">
-                        <ul>
+                            <li>Javascript</li>
                             <li>Communication</li>
                             <li>Documentation</li>
                             <li>Git</li>
