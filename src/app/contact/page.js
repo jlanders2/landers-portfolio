@@ -4,13 +4,19 @@ import { contactByEmail } from "@/lib/contact";
 import { useForm } from "react-hook-form";
 
 export default function Contact() {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, formState: { errors, isSubmitted } } = useForm();
+
 
     async function onSubmit(data) {
         await contactByEmail(data);
     }
 
-    return <form className="container" onSubmit={handleSubmit(onSubmit)}>
+    return isSubmitted ? 
+    (<div className="container d-flex justify-content-center">
+    <p>Thank you for reaching out! If you provided contact information I will reach out as soon as I can.</p>
+    </div>
+    ) : 
+    (<form className="container" onSubmit={handleSubmit(onSubmit)}>
         <div className="row justify-content-center">
             <div className="col-xxl-6 col-sm-8">
                 <div className="mb-3">
@@ -39,5 +45,6 @@ export default function Contact() {
                 <button name="submitButton" className="btn btn-primary bg-light text-dark border-dark w-100" type="submit">Send</button>
             </div>
         </div>
-    </form>;
+    </form>
+    );
 }

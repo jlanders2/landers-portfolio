@@ -15,6 +15,8 @@ export async function contactByEmail(data) {
         html: `<html>${data.message}</html>`
     };
 
+    if (!message.text) return;
+
     await sgMail
         .send(message)
         .then(() => {

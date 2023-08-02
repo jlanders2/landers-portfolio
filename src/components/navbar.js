@@ -4,7 +4,7 @@ export function Navbar() {
     return <div className="container pt-5">
         <div className="w-100 d-flex justify-content-center">
             <p className="h4 fw-bold">
-                Cole Landers
+                John Cole Landers
             </p>
         </div>
         <div className="d-flex justify-content-center">

@@ -2,7 +2,7 @@ export default function About() {
     return <div className="container">
         <section>
             <p>
-                I&apos;m a passionate software developer with a strong desire to [insert desire here].
+                I&apos;m a passionate software developer with a strong desire to deliver top-notch software solutions.
                 With 4 years of experience in the industry, I have developed a deep understanding of frontend web, backend web and database  development.
             </p>
         </section>
