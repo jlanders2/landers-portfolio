@@ -19,3 +19,21 @@ input, textarea, #contactSubmit {
 a {
     text-decoration: none !important;
 }
+
+@font-face {
+    font-family: "HeadingFont";
+    src: url('../fonts/LinlegreyRegular-Oo3O.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.font-heading {
+    font-family: 'HeadingFont', sans-serif;
+}
+
+.center-screen {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
