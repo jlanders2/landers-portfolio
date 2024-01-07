@@ -13,7 +13,7 @@ input, textarea, #contactSubmit {
 }
 
 .navButton:hover a{
-    color: rgb(157, 196, 148) !important;
+    color: #708090 !important;
 }
 
 a {
