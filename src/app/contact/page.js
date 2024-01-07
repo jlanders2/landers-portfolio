@@ -20,7 +20,7 @@ export default function Contact() {
         <div className="row justify-content-center">
             <div className="col-xxl-6 col-sm-8">
                 <div className="mb-3">
-                    <label htmlFor="from" className="form-label">Email address</label>
+                    <label htmlFor="from" className="form-label">Your Email Address</label>
                     <input  id="from"
                             name="from" 
                             className="form-control"
